@@ -98,6 +98,7 @@ function App() {
         </div>
         <form className="d-flex flex-row bd-highlight mb-3 form-section" onSubmit={handleSubmit}>
           <input
+            placeholder='Type your message here...'
             className="form-control"
             id="chatbotTextarea"
             rows="1"
