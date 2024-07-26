@@ -38,12 +38,28 @@ Install and create the project if it does not already exist
 
 ## Running the application
 
+Add proxy to client in package.json
+
+"proxy": "http://localhost:5000"
+
+{
+  ...
+  "dependencies": {
+    ...
+  },
+  "scripts": {
+    ...
+  },
+  "proxy": "http://localhost:5000"
+}
+
+
 cd into api folder where api.py file is located and activate the virtual environment
 
 ### `source venv/bin/activate`
 
 To package.json scripts add
-"start-api": "cd api && venv/bin/flask run --host=0.0.0.0 --no-debugger && react-scripts start",
+"start-api": "cd api && venv/bin/flask run --host=0.0.0.0 --no-debugger",
 
 cd back to main project directory. To startup the server, run
 
