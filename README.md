@@ -2,17 +2,60 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Install and create the project if it does not already exist 
+
+### `sudo apt upgrade`
+
+### `sudo apt install npm`
+
+### `npx create-react-app react-flask-app`
+
+### `cd react-flask-app`
+
+### `mkdir api`
+
+### `cd api`
+
+### `sudo apt install python3.12-venv`
+
+### `python3 -m venv venv`
+
+### `pip install flask python-dotenv`
+
+### `FLASK_APP=api.py`
+
+### `FLASK_ENV=development`
+
+### `pip install --upgrade openai`
+
+### `pip install icecream`
+
+### `pip install numpy`
+
+### `pip install matplotlib`
+
+## Running the application
+
+cd into api folder where api.py file is located and activate the virtual environment
+
+### `source venv/bin/activate`
+
+To package.json scripts add
+"start-api": "cd api && venv/bin/flask run --host=0.0.0.0 --no-debugger && react-scripts start",
+
+cd back to main project directory. To startup the server, run
+
+### `npm run start-api`
+
+To startup client, run
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Other Available Scripts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the project directory, you can run:
 
 ### `npm test`
 
