@@ -16,7 +16,6 @@ assistant = client.beta.assistants.create(
     - nGeniusONE Solution : ng1.txt,
     - Packet Flow Switches (PFS) and TAPs : pfs.txt, 
     - Switches/Ports data: ports.json and switches.json
-    - Fruit or Vegetable('apples'/'bananas'/'carrots'): Call the corresponding function.
     - Disk Space Usage: Call the corresponding function.
     
     If the user asks something irrelevant to these categories then kindly ask them for a relevant query.
@@ -24,42 +23,6 @@ assistant = client.beta.assistants.create(
   """,
   model="gpt-4o",
   tools=[
-    {
-      "type": "function",
-      "function": {
-        "name": "get_image_paths",
-        "description": "Get the relative paths of the image files within a specified folder named after a fruit or vegetable.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "topic": {
-              "type": "string",
-              "description": "The name of the fruit or vegetable."
-            }
-          },
-          "required": ["topic"]
-        }
-      }
-    },
-    
-    {
-      "type": "function",
-      "function": {
-        "name": "make_diskSpaceUsage_graph",
-        "description": "Create a graph image of disk space usage in a given location.",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "location": {
-              "type": "string",
-              "description": "The location where the disk space usage needs to be calculated."
-            }
-          },
-          "required": ["location"]
-        }
-      }
-    },
-    
     {
       "type": "file_search"
     }
