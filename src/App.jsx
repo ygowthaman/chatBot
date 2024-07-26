@@ -11,13 +11,13 @@ function App() {
     chatEntry: 'Hello! I am the Netscout Assistant! How can I help you?',
     id: 1
   }]);
-  const [currentTime, setCurrentTime] = useState(0);
+  // const [currentTime, setCurrentTime] = useState(0);
 
-  useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
-  }, []);
+  // useEffect(() => {
+  //   fetch('/time').then(res => res.json()).then(data => {
+  //     setCurrentTime(data.time);
+  //   });
+  // }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -64,7 +64,6 @@ function App() {
         chatArray.pop();
         resMessage = streamResponseText;
       }
-      console.log(chatArray[chatArray.length - 1].chatEntry);
       const deepCopy = [...chatArray]
       deepCopy.push({
         userMessage: false,
@@ -82,7 +81,6 @@ function App() {
       <header className="App-header">
         <img src='./netscout-logo.png'></img>
         <span>ChatBOT</span>
-        <span>{currentTime}</span>
       </header>
       <section className="d-flex flex-column align-items-center">
         <div className="chat-history">
