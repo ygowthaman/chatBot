@@ -1,0 +1,33 @@
+.scout {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 5px;
+
+  img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.scout-chat {
+  background-color: #e1ffdd;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.scout-chat::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 26px solid #e1ffdd;
+  border-bottom: 13px solid transparent;
+  margin: 13px 0 0 -25px;
+}
